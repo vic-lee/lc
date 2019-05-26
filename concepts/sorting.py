@@ -79,12 +79,12 @@ def insertion_sort(nums: [int]) -> [int]:
         # Because the while loop before us has terminated, this means: 
         # EITHER we've reached the beginning of the list (the key is the
         # smallest value in the list), OR nums[i] <= key <= nums[i+1].
-        # This is because from the while loop, we know that the value at 
-        # i+1 (originall i, but i has been decremented) is larger than 
-        # key, and is copied to i+2 (again, originally i+1). The while
-        # loop has ended, so, if the cursor is not at the front, this 
-        # must mean that nums[i] <= key, terminating the while loop. 
-        #
+        # We know from the while loop that the value at i+1 (originall i, 
+        # but i has been decremented) is larger than key, and is copied 
+        # to i+2 (again, originally i+1). The while loop has ended, so, 
+        # if the cursor is not at the front, this must mean that 
+        # nums[i] <= key, terminating the while loop. 
+
         # We have thus shown that nums[i] <= key <= nums[i+1], provided
         # we are not at the front of the list, in which case we've shown
         # key <= nums[i+1].
