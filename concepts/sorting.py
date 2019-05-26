@@ -73,7 +73,7 @@ def insertion_sort(nums: [int]) -> [int]:
             nums[i + 1] = nums[i]           # swap with the number before it
             i -= 1                          # if swapped, we continue consider the num before
 
-        # at this point, the number at i+1 has been copied to i+2.
+        # At this point, the number at i+1 has been copied to i+2.
         # i.e. it is safe to overwrite the value stored at i+1. 
         #
         # Because the while loop before us has terminated, this means: 
