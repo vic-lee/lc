@@ -14,9 +14,9 @@ def test_sort(sort_func):
         print("unsorted: \t{}".format(unsorted_list))
 
         sorted_list = sort_func(*args, **kwargs)
-        sort_list_tested = _sort_tester(*args, **kwargs)
+        correct_sort_list = _sort_tester(*args, **kwargs)
 
-        if sorted_list != sort_list_tested:
+        if sorted_list != correct_sort_list:
             print("ERROR: sorting output incorrect")
         else:
             print("sorted: \t{}".format(sorted_list))
