@@ -6,20 +6,30 @@
     Author: Vic Lee
 '''
 
+import logging
+
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+
+fmt = '%(name)s - %(levelname)s - %(message)s'
+formatter = logging.Formatter(fmt)
+stream_handler = logging.StreamHandler()
+stream_handler.setFormatter(formatter)
+
+logger.addHandler(stream_handler)
+
 
 def test_sort(sort_func):
     """Decorator that tests if a sorting algorithm is correct"""
     def wrapper(*args, **kwargs):
         unsorted_list = args[0]
-        print("unsorted: \t{}".format(unsorted_list))
-
-        sorted_list = sort_func(*args, **kwargs)
+        logger.info("unsorted: \t{}".format(unsorted_list))
         correct_sort_list = _sort_tester(*args, **kwargs)
-
+        sorted_list = sort_func(*args, **kwargs)
         if sorted_list != correct_sort_list:
-            print("ERROR: sorting output incorrect")
+            logger.error("sorting output incorrect")
         else:
-            print("sorted: \t{}".format(sorted_list))
+            logger.info("sorted: \t{}".format(sorted_list))
 
         return sorted_list
 
