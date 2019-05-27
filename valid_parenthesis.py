@@ -1,20 +1,20 @@
 """
-    My solution to the valide parenthesis problem, in 3 versions. 
+My solution to the valide parenthesis problem, in 3 versions. 
 
-    src: https://leetcode.com/problems/valid-parentheses/
+src: https://leetcode.com/problems/valid-parentheses/
 """
 
 
 class Solution:
     """
-        Solution v3:
-            We further improve the runtime of this algorithm by avoiding the
-            `pop()` operation if we are to return False. Note that the `pop`
-            statement is executed whether we return True or False in the prior
-            implementation; we do not need to pop if we return False.
+    Solution v3:
+        We further improve the runtime of this algorithm by avoiding the
+        `pop()` operation if we are to return False. Note that the `pop`
+        statement is executed whether we return True or False in the prior
+        implementation; we do not need to pop if we return False.
 
-            Another syntax sugar is to check if the stack (i.e. list) is empty
-            by `if stack` and `if not stack`.
+        A syntax sugar is to check if the stack (i.e. list) is empty
+        by `if stack` and `if not stack`.
     """
 
     def isValid(self, s: str) -> bool:
@@ -33,12 +33,12 @@ class Solution:
 
 class Solution_v2:
     """
-        Solution v2:
-            We replace the close and open char lists with a mapping that is 
-            more illustrative of the pairing relationship. 
-            With this pairing, we can enable a universal implementation for 
-            checking if the close char matches the open char (as opposed to
-            the cumbersome switch cases in v1).
+    Solution v2:
+        We replace the close and open char lists with a mapping that is 
+        more illustrative of the pairing relationship. 
+        With this pairing, we can enable a universal implementation for 
+        checking if the close char matches the open char (as opposed to
+        the cumbersome switch cases in v1).
     """
 
     def isValid(self, s: str) -> bool:
