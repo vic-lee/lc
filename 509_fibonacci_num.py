@@ -6,6 +6,11 @@ src: https://leetcode.com/problems/fibonacci-number/
 
 class Solution:
     """
+    Result
+    ------
+    - Runtime:      28ms    (98.04%)
+    - Memory:       13.1Mb  (77.15%)
+
     Key takeaways
     -------------
     - Identify whether recursive calls are repetitive calculations

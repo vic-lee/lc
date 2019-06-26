@@ -13,7 +13,14 @@ src: https://leetcode.com/problems/average-of-levels-in-binary-tree/
 
 class Solution:
     """
-    v2: simplify mean()
+    Result
+    ------
+    - Runtime:      56ms    (91.26%)
+    - Memory:       15.4Mb  (90.65%)
+
+    Improvements
+    ------------
+    - Simplified `mean()`
     """
     def averageOfLevels(self, root: TreeNode) -> List[float]:
         if not root:
