@@ -22,15 +22,13 @@ class Solution:
         level = [root]
         ans = []
         while len(level) > 0:
-
+            ans.append(self.mean(level))
             next_level = []
             for node in level:
                 if node.left:
                     next_level.append(node.left)
                 if node.right:
                     next_level.append(node.right)
-
-            ans.append(self.mean(level))
             level = next_level
 
         return ans
